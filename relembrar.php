@@ -23,3 +23,6 @@ foreach ($alunos as $aluno) {
     echo "$aluno $Mensagem  " . PHP_EOL; 
 }
 
+$cores = ["azul", "verde", "vermelho"];
+
+
