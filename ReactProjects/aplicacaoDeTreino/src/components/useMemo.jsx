@@ -7,7 +7,7 @@ function UsandoMemo() {
   const dobro = useMemo(() => {
     console.log("Calculando dobro...");
     let soma = 0;
-    for (let i = 0; i < 200000000; i++) { // laço pesado
+    for (let i = 0; i < 200000000; i++) { 
       soma += i;
     }
     return numero * 2;
