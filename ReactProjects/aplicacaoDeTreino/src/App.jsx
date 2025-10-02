@@ -2,6 +2,7 @@ import './App.css'
 import InputUseRef from './components/useRef'
 import GeralHpoks from './components/GeralHooks'
 import Temporizador from './components/useEffectTemporizador'
+import UsandoMemo from './components/useMemo'
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
       <div>
         <InputUseRef/>
         <Temporizador/>
+        <UsandoMemo/>
       </div>
     </>
   )
