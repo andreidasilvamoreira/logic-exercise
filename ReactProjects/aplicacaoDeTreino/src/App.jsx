@@ -1,13 +1,15 @@
 import './App.css'
-import Contador from './components/contador'
+import InputUseRef from './components/useRef'
 import GeralHpoks from './components/GeralHooks'
+import Temporizador from './components/useEffectTemporizador'
 
 function App() {
 
   return (
     <>
       <div>
-        <GeralHpoks/>
+        <InputUseRef/>
+        <Temporizador/>
       </div>
     </>
   )
