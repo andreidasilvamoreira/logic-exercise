@@ -22,9 +22,9 @@ const [texto, setTexto] = useState("");
       <button onClick={adicionar}>Adicionar</button>
 
       <ul>
-        {lista.map((item, index) => (
-          <li key={index}>{item}</li>
-        ))}
+        {lista.map((index, item) => {
+            <li key={index}>{item}</li>
+        })}
       </ul>
     </div>
   );
