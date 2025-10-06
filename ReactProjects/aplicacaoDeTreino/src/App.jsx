@@ -1,10 +1,6 @@
 import './App.css'
 import { useState } from 'react'
-import InputUseRef from './components/useRef'
-import GeralHpoks from './components/GeralHooks'
 import Temporizador from './components/useEffectTemporizador'
-import UsandoMemo from './components/useMemo'
-import ExemploCallback from './components/useCallback'
 import { ThemeContext } from './context/themaContext'
 import {ContagemContext} from './context/contagemContext'
 import Contador from './components/contador'
@@ -21,13 +17,14 @@ function App() {
         <h1>React Hooks</h1>
 
         <ThemeContext.Provider value={{ tema, alternarTema }}>
-          <ContagemContext.Provider value={Contador}>
+          <ContagemContext.Provider value={{}}>
             <Contador />
             <Temporizador />
             </ContagemContext.Provider>
             <h1>Tema atual {tema}</h1>
             <button onClick={alternarTema}>Mudar tema</button>
         </ThemeContext.Provider>
+        <h1>renderizou</h1>
       </div>
     </>
   )

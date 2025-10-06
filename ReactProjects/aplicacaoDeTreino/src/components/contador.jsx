@@ -1,9 +1,9 @@
 import Botao from "./botao";
-import { useContador } from "../context/contagemContext"
-
+import { useConta } from "../context/contagemContext"
+    const useContador = useContext(contador)
 function Contador() {
     const { contador, incrementar, decrementar, resetar } = useContador();
-    
+
     return (
         <div>
             <h1>{contador}</h1>

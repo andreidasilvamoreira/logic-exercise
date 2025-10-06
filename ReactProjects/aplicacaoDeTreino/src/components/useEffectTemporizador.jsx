@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import { useContagem } from "../context/contagemContext";
 function Temporizador() {
-const {contador} = useContagem;
-    useEffect(() => {
-        return "the count has changed" ;
-    }, [contador]);
+  const { contador } = useContagem();
+  useEffect(() => {
+    console.log("O contador mudou para:", contador);
+  }, [contador]);
+  return <h2>Contador atual: {contador}</h2>;
+
 }
 
 export default Temporizador;
