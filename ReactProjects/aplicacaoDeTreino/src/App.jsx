@@ -6,9 +6,10 @@ import Temporizador from './components/useEffectTemporizador'
 import UsandoMemo from './components/useMemo'
 import ExemploCallback from './components/useCallback'
 import { ThemeContext } from './context/themaContext'
+import {ContagemContext} from './context/contagemContext'
+import Contador from './components/contador'
 
 function App() {
-
   const [tema, setTema] = useState("dark")
 
   function alternarTema() {
@@ -17,10 +18,15 @@ function App() {
   return (
     <>
       <div className={tema === "dark" ? "dark-theme" : "light-theme"}>
-        <ThemeContext.Provider value={{tema, alternarTema}}>
-          <Temporizador/>
-          <h1>Tema atual {tema}</h1>
-          <button onClick={alternarTema}>Mudar tema</button>
+        <h1>React Hooks</h1>
+
+        <ThemeContext.Provider value={{ tema, alternarTema }}>
+          <ContagemContext.Provider value={Contador}>
+            <Contador />
+            <Temporizador />
+            </ContagemContext.Provider>
+            <h1>Tema atual {tema}</h1>
+            <button onClick={alternarTema}>Mudar tema</button>
         </ThemeContext.Provider>
       </div>
     </>

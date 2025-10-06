@@ -1,19 +1,10 @@
 import { useState, useEffect } from "react";
-
+import { useContagem } from "../context/contagemContext";
 function Temporizador() {
-    const [hora, setHora] = useState(new Date())
-
+const {contador} = useContagem;
     useEffect(() => {
-        const timer = setInterval(() => setHora(new Date), 1000)
-        return () => clearInterval(timer);
-    }, []);
-
-    return (
-    <div>
-      <h2>Relógio em tempo real</h2>
-      <p>{hora.toLocaleTimeString()}</p>
-    </div>
-  );
+        return "the count has changed" ;
+    }, [contador]);
 }
 
 export default Temporizador;
